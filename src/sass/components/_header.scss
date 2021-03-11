@@ -1,0 +1,141 @@
+.header {
+  min-height: 8vh;
+  padding: 0 1.6rem;
+  border-bottom: 1px solid var(--color-grey-1);
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 8vh;
+  }
+
+  &__brand {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  &__menu {
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    cursor: pointer;
+
+    @media only screen and (min-width: 700px) {
+      display: none;
+    }
+  }
+
+  &__cart {
+    font-size: 2.5rem;
+    margin-left: auto;
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+
+    transition: opacity 0.2s;
+
+    @media only screen and (min-width: 700px) {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+  }
+
+  .hideBackdrop {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .showBackdrop {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100vh;
+    z-index: 9999;
+    background-color: var(--color-white);
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.26);
+    padding: 2rem 0;
+    max-width: 400px;
+
+    transition: transform 0.4s ease-in-out;
+
+    @media only screen and (min-width: 700px) {
+      all: unset;
+      display: flex;
+      transform: translateX(0) !important ;
+      gap: 1.5rem;
+      margin-left: auto;
+    }
+  }
+
+  .hidden {
+    transform: translateX(-100rem);
+  }
+
+  .show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &__nav-container {
+    padding: 0 1rem;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media only screen and (min-width: 700px) {
+      display: none;
+    }
+  }
+
+  &__nav-brand {
+    letter-spacing: 5px;
+    font-size: 2.5rem;
+  }
+
+  &__close {
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+
+  &__link {
+    border-bottom: 1px solid var(--color-grey-1);
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text-1);
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-black);
+    }
+
+    @media only screen and (min-width: 700px) {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  &__signin {
+    color: var(--color-primary);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+  }
+}
