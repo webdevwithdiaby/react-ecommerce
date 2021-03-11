@@ -1,12 +1,21 @@
 .header {
-  min-height: 8vh;
-  padding: 0 1.6rem;
-  border-bottom: 1px solid var(--color-grey-1);
+  //border-bottom: 1px solid var(--color-grey-1);
+  min-height: 85vh;
+  color: var(--color-white);
+  background-position: left 30% top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @media only screen and (max-width: 700px) {
+    background-position: left 50% top;
+  }
 
   .wrapper {
     display: flex;
     align-items: center;
     min-height: 8vh;
+    padding: 0 1.6rem;
   }
 
   &__brand {
@@ -94,6 +103,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
     @media only screen and (min-width: 700px) {
       display: none;
     }
@@ -101,12 +111,14 @@
 
   &__nav-brand {
     letter-spacing: 5px;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    color: black;
   }
 
   &__close {
     font-size: 2.5rem;
     cursor: pointer;
+    color: black;
   }
 
   &__link {
@@ -114,28 +126,53 @@
     padding: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--color-text-1);
     text-transform: uppercase;
+    color: var(--color-text-1);
 
     &:hover {
       text-decoration: underline;
-      color: var(--color-black);
     }
 
     @media only screen and (min-width: 700px) {
       border: none;
       padding: 0;
+      color: var(--color-white);
     }
   }
 
-  &__signin {
+  /*&__signin {
     color: var(--color-primary);
 
     &:hover {
       color: var(--color-primary);
     }
+  }*/
+
+  &__hero-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2rem;
   }
 
-  @media only screen and (min-width: 700px) {
+  &__hero-box-text2 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin: 1.5rem 0;
+  }
+
+  &__hero-box-btn {
+    margin-top: 3rem;
+    font-family: inherit;
+    color: white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    border: 1px solid white;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    outline: none;
   }
 }
