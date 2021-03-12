@@ -1,10 +1,16 @@
 import React from "react";
-import Header from "../../components/header/header.component";
+import CategoryList from "../../components/category-list/category-list.component";
+import Hero from "../../components/hero/hero.component";
 
 const HomePage = () => {
   return (
-    <div className="home-page">
-      <Header />
+    <div className="home">
+      <Hero />
+      <main className="home__main">
+        <div className="wrapper">
+          <CategoryList />
+        </div>
+      </main>
     </div>
   );
 };

@@ -1,0 +1,40 @@
+.hero {
+  min-height: 85vh;
+  color: var(--color-white);
+  background-position: left 30% top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @media only screen and (max-width: 700px) {
+    background-position: left 50% top;
+  }
+}
+
+.hero-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hero-box-text2 {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin: 1.5rem 0;
+}
+
+.hero-box-btn {
+  margin-top: 3rem;
+  font-family: inherit;
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  outline: none;
+}

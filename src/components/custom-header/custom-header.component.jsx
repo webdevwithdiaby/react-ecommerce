@@ -1,21 +1,16 @@
 import React, { useState } from "react";
-
 import { MdMenu, MdShoppingCart, MdClose } from "react-icons/md";
-
 import { withRouter } from "react-router-dom";
 
-import hero from "../../assets/hero.jpg";
-
-const Header = ({ history }) => {
+const CustomHeader = ({ history, withBlackLink }) => {
   const [isNavShown, setIsNavShown] = useState(false);
 
   const handleNavVisibility = () => {
     console.log("nav visibility trigerred ");
     setIsNavShown((prev) => !prev);
   };
-
   return (
-    <header className={`header`} style={{ backgroundImage: `url(${hero})` }}>
+    <header className="header">
       <div
         className={`header__backdrop ${
           isNavShown ? "showBackdrop" : "hideBackdrop"
@@ -24,23 +19,32 @@ const Header = ({ history }) => {
       ></div>
       <div className="wrapper">
         <MdMenu className="header__menu" onClick={handleNavVisibility} />
-        <h1 className="header__brand"> Ecommerce </h1>
+        <h1 className="header__brand" onClick={() => history.push("/")}>
+          {" "}
+          ShapShap{" "}
+        </h1>
         <div className={`header__nav  ${isNavShown ? "show" : "hidden"} `}>
           <div className="header__nav-container">
-            <h1 className="header__nav-brand"> Ecommerce </h1>
+            <h1 className="header__nav-brand" onClick={() => history.push("/")}>
+              {" "}
+              ShapShap{" "}
+            </h1>
             <MdClose className="header__close" onClick={handleNavVisibility} />
           </div>
-          <div className="header__link" onClick={() => history.push("/shop")}>
+          <div
+            className={`header__link ${withBlackLink ? "blackLink" : null}`}
+            onClick={() => history.push("/shop")}
+          >
             Shop
           </div>
           <div
-            className="header__link"
+            className={`header__link ${withBlackLink ? "blackLink" : null}`}
             onClick={() => history.push("/contact")}
           >
             Contact
           </div>
           <div
-            className="header__link header__signin"
+           className={`header__link ${withBlackLink ? "blackLink" : null}`}
             onClick={() => history.push("/signin")}
           >
             Sign in
@@ -48,14 +52,8 @@ const Header = ({ history }) => {
         </div>
         <MdShoppingCart className="header__cart" />
       </div>
-      <div className="header__hero-box">
-        <p className="header__hero-box-text1">Don't miss</p>
-        <h2 className="header__hero-box-text2"> Mystery Deals </h2>
-        <p className="header__hero-box-text3"> Online only </p>
-        <button className="header__hero-box-btn"> DISCOVER NOW </button>
-      </div>
     </header>
   );
 };
 
-export default withRouter(Header);
+export default withRouter(CustomHeader);
