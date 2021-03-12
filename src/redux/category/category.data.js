@@ -22,7 +22,7 @@ const data = {
     '5' : {
         id: '5',
         title: 'Mens',
-        imageUrl: 'http://golfdemenneville.fr/wp-content/uploads/2015/12/product-man-2.jpg'
+        imageUrl: 'https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/6139/53142/100-Cotton-Big-Size-Summer-Men-s-Clothing-Tank-Tops-Solid-Color-Singlets-Sleeveless-Fitness-Mens__43910.1595323105.jpg?c=2?imbypass=on'
     }
 };
 
