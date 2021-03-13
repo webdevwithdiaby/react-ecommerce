@@ -5,7 +5,9 @@ const ContactPage = () => {
   return (
     <div>
       <CustomHeader withBlackLink={true} />
-      CONTACT PAGE
+      <main className="main">
+        <div className="wrapper">CONTACT PAGE</div>
+      </main>
     </div>
   );
 };

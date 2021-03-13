@@ -6,7 +6,11 @@ const Signin = () => {
   return (
     <div>
       <CustomHeader withBlackLink={true} />
-      SIGN IN PAGE 
+      <main className="main">
+        <div className="wrapper">
+        SIGN IN PAGE 
+        </div>
+      </main>
     </div>
   );
 };
