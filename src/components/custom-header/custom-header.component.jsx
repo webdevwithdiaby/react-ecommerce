@@ -57,8 +57,9 @@ const CustomHeader = ({ history, withBlackLink, cartItemsCount }) => {
         <div className="header__cart-box">
           <MdShoppingCart className="header__cart" />
           <span> {`(${cartItemsCount})`} </span>
+          <Dropdown />
         </div>
-        <Dropdown />
+        
       </div>
     </header>
   );

@@ -10,7 +10,11 @@ const Dropdown = ({ cartItems }) => {
       {!(cartItems.length > 0) ? (
         <p className="dropdown__empty-message">No cart item !</p>
       ) : (
-        <div className="dropdown__items">items list</div>
+        <div className="dropdown__items">
+            {
+                cartItems.map( item => <div key={item.id} > {`${item.name} --> ${item.quantity}`} </div> )
+            }
+        </div>
       )}
     </div>
   );
