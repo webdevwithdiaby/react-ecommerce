@@ -6,7 +6,6 @@ const CustomHeader = ({ history, withBlackLink }) => {
   const [isNavShown, setIsNavShown] = useState(false);
 
   const handleNavVisibility = () => {
-    console.log("nav visibility trigerred ");
     setIsNavShown((prev) => !prev);
   };
   return (
@@ -44,7 +43,7 @@ const CustomHeader = ({ history, withBlackLink }) => {
             Contact
           </div>
           <div
-           className={`header__link ${withBlackLink ? "blackLink" : null}`}
+            className={`header__link ${withBlackLink ? "blackLink" : null}`}
             onClick={() => history.push("/signin")}
           >
             Sign in

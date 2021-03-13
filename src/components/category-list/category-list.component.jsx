@@ -7,7 +7,6 @@ import { selectCategoriesForDisplay } from "../../redux/category/category.select
 import CategoryItem from "../category-item/category.component";
 
 const CategoryList = ({ categories }) => {
-  console.log(categories);
   return (
     <div>
       <h2 className="category-list__title">Our categories</h2>
