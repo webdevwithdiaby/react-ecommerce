@@ -10,7 +10,7 @@ const CategoryList = ({ categories }) => {
   return (
     <div>
       <h2 className="category-list__title">Our categories</h2>
-      <div className="category-list__container">
+      <div className="container-grid">
         {categories.map((cat) => (
           <CategoryItem key={cat.id} {...cat} />
         ))}
