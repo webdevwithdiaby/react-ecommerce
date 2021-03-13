@@ -1,0 +1,18 @@
+.btn {
+  display: inline-block;
+  font: inherit;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 0.5rem 2rem;
+  border: none;
+  outline: none;
+
+  &__primary {
+    background-color: hsl(0, 0%, 20%);
+    color: #fff;
+
+    &:hover {
+        background-color: hsl(0, 0%, 30%);
+    }
+  }
+}

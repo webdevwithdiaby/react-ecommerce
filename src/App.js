@@ -4,6 +4,7 @@ import HomePage from "./pages/home/home.component";
 import ShopPage from "./pages/shop/shop.component";
 import ContactPage from "./pages/contact/contact.component";
 import SignInPage from "./pages/signin/signin.component";
+import Footer from "./components/footer/footer.component";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/signin" component={SignInPage} />
         </Switch>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 };
