@@ -7,6 +7,11 @@ const selectCollections = createSelector(
   (collectionReducer) => collectionReducer.collections
 );
 
+export const selectCollectionsForDisplay = createSelector(
+  [selectCollections],
+  (collections) => Object.keys(collections).map((key) => collections[key])
+);
+
 export const selectCollection = (collectionId) =>
   createSelector(
     [selectCollections],

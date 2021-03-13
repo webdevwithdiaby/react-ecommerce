@@ -2,10 +2,25 @@
   margin-top: 1.5rem;
   font-size: 1.4rem;
   background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__image-box {
+    height: 210px;
+    overflow: hidden;
+  }
 
   &__image {
     width: 100%;
-    height: 200px;
+    height: 210px;
+    transition: all 0.4s;
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    @media only screen and (min-width: 700px) {
+      height: 250px;
+    }
   }
 
   &__text-box {

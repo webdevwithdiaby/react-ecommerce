@@ -6,7 +6,6 @@ import { selectCollection } from "../../redux/collection/collection.selectors";
 import CollectionItem from "../collection-item/collection-item.component";
 
 const CollectionItemList = ({ match, collection }) => {
-  console.log(collection);
   return (
     <div className="collection-item-list">
       <h2 className="collection-item-list__title">{collection.title}</h2>
