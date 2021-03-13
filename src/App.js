@@ -5,6 +5,7 @@ import ShopPage from "./pages/shop/shop.component";
 import ContactPage from "./pages/contact/contact.component";
 import SignInPage from "./pages/signin/signin.component";
 import Footer from "./components/footer/footer.component";
+import CheckoutPage from "./pages/checkout/checkout.component";
 
 const App = () => {
   return (
@@ -15,9 +16,10 @@ const App = () => {
           <Route path="/shop" component={ShopPage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/signin" component={SignInPage} />
+          <Route path="/checkout" component={CheckoutPage} />
         </Switch>
       </BrowserRouter>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

@@ -6,7 +6,10 @@ import { selectCartItems } from "../../redux/cart/cart.selectors";
 
 import Button from "../button/button.component";
 
+import { useHistory } from "react-router-dom";
+
 const Dropdown = ({ cartItems }) => {
+  const history = useHistory();
   return (
     <div className="dropdown">
       {!(cartItems.length > 0) ? (
@@ -25,7 +28,7 @@ const Dropdown = ({ cartItems }) => {
             </div>
           ))}
           <div className="checkout-box">
-            <Button variant="primary" onClick={() => alert("checkout")}>
+            <Button variant="primary" onClick={() => history.push('/checkout') }>
               Checkout
             </Button>
           </div>
