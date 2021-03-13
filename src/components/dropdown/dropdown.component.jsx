@@ -25,7 +25,9 @@ const Dropdown = ({ cartItems }) => {
             </div>
           ))}
           <div className="checkout-box">
-          <Button variant="primary">Checkout</Button>
+            <Button variant="primary" onClick={() => alert("checkout")}>
+              Checkout
+            </Button>
           </div>
         </div>
       )}
