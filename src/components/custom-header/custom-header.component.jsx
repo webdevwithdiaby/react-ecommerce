@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
+import Dropdown from "../dropdown/dropdown.component";
 
 const CustomHeader = ({ history, withBlackLink, cartItemsCount }) => {
   const [isNavShown, setIsNavShown] = useState(false);
@@ -57,6 +58,7 @@ const CustomHeader = ({ history, withBlackLink, cartItemsCount }) => {
           <MdShoppingCart className="header__cart" />
           <span> {`(${cartItemsCount})`} </span>
         </div>
+        <Dropdown />
       </div>
     </header>
   );
