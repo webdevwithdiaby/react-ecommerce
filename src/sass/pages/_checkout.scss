@@ -1,0 +1,25 @@
+.checkout-page {
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.26);
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+
+  &__image {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  &__quantity-box {
+    margin: 0 auto;
+  }
+}
