@@ -23,9 +23,21 @@
     }
   }
 
+  &__cart-box {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    span {
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: green;
+    }
+  }
+
   &__cart {
     font-size: 2.5rem;
-    margin-left: auto;
+    margin-right: 0.5rem;
   }
 
   &__backdrop {

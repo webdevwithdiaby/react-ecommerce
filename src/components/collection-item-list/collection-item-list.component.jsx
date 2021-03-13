@@ -10,9 +10,9 @@ const CollectionItemList = ({ match, collection }) => {
     <div className="collection-item-list">
       <h2 className="collection-item-list__title">{collection.title}</h2>
       <div className="container-grid">
-          {
-              collection.items.map( item => <CollectionItem key={item.id} {...item} /> )
-          }
+        {collection.items.map((item) => (
+          <CollectionItem key={item.id} item={item} />
+        ))}
       </div>
     </div>
   );

@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { MdMenu, MdShoppingCart, MdClose } from "react-icons/md";
 import { withRouter } from "react-router-dom";
 
-const CustomHeader = ({ history, withBlackLink }) => {
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
+
+const CustomHeader = ({ history, withBlackLink, cartItemsCount }) => {
   const [isNavShown, setIsNavShown] = useState(false);
 
   const handleNavVisibility = () => {
@@ -49,10 +53,17 @@ const CustomHeader = ({ history, withBlackLink }) => {
             Sign in
           </div>
         </div>
-        <MdShoppingCart className="header__cart" />
+        <div className="header__cart-box">
+          <MdShoppingCart className="header__cart" />
+          <span> {`(${cartItemsCount})`} </span>
+        </div>
       </div>
     </header>
   );
 };
 
-export default withRouter(CustomHeader);
+const mapStateToProps = createStructuredSelector({
+  cartItemsCount: selectCartItemsCount,
+});
+
+export default withRouter(connect(mapStateToProps)(CustomHeader));
