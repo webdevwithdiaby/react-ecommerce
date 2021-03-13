@@ -6,13 +6,20 @@
   padding: 0.5rem 2rem;
   border: none;
   outline: none;
+  cursor: pointer;
 
   &__primary {
     background-color: hsl(0, 0%, 20%);
     color: #fff;
 
     &:hover {
-        background-color: hsl(0, 0%, 30%);
+      background-color: hsl(0, 0%, 30%);
     }
+  }
+
+  &__secondary {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: 1px solid #ccc;
   }
 }

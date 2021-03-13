@@ -4,6 +4,20 @@
   background-color: #fff;
   border-radius: 4px;
   overflow: hidden;
+  position: relative;
+
+  .btn {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .4s;
+  }
+
+  &:hover .btn {
+    opacity: 1;
+  }
 
   &__image-box {
     height: 210px;

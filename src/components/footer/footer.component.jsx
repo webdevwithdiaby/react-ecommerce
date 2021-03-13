@@ -6,6 +6,7 @@ const Footer = () => {
       <p className="footer__text">
         All rights reserved <span className="footer__brand">ShapShap</span> 2021
       </p>
+      <p>By Diabysoft</p>
     </div>
   );
 };
